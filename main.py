@@ -3,18 +3,31 @@ class Calculator:
         self.symbol = symbol
         self.number = number
 
-    def add(self, sk) -> float:
-        return self.number + sk
+    def add(self) -> float:
+        return self.number + self.number
 
     def sub(self) -> float:
-        ...
+        return self.number - 15
 
     def div(self) -> float:
-        ...
+        return self.number / 2
 
     def mul(self) -> float:
-        ...
+        return self.number * self.number
 
     def calculate(self) -> float:
-        ...
+        if self.symbol == "+":
+            return self.add()
+        elif self.symbol == "-":
+            return self.sub()
+        elif self.symbol == "*":
+            return self.mul()
+        elif self.symbol == "/":
+            return self.div()
+        
+        
+calculator = Calculator("+", 12)
+
+result = calculator.calculate()
+print(result)
  
